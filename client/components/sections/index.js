@@ -6,16 +6,20 @@ import About from './about';
 import Education from './education';
 import Skills from './skills';
 import Works from './works';
-import Contactt from './contact';
+import Contact from './contact';
 
 class Sections extends Component {
-  render () {
+  constructor(props) {
+    super(props);
+  } 
+
+  render() {
     <div>
-      <About content='' />
-      <Work content='' />
-      <Education content='' />
-      <Skills content='' />
-      <Contact content='' />
+      <About />
+      <Work />
+      <Education />
+      <Skills />
+      <Contact />
     </div>
   }
 }

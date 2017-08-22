@@ -2,12 +2,11 @@
 
 import React, { Component } from 'react';
 
-class Header extends Component {
-  render () {
+class Sections extends Component {
+  render() {
     <div>
-     
     </div>
   }
 }
 
-export default Header;
+export default Sections;

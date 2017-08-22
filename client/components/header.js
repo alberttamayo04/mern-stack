@@ -6,7 +6,7 @@ import Menu from './nav';
 import Banner from './banner';
 
 class Header extends Component {
-  render () {
+  render() {
     <div>
       <Menu content ='' />
       <Banner content='' />
