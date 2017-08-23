@@ -1,28 +1,34 @@
 'use strict';
 
-import React, { Component, PropTypes } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import Header from './header';
 import Sections from './sections';
 import Footer from './footer';
 
-class App extends Component {
+export default class Main extends Component {
   constructor(props) {
     super(props);
-    console.log('props', props);
   } 
 
   render() {
-    <div>
-      <Header  />
-      <Sections />
-      <Footer />
-    </div>  
+    let {basics, sections} = this.props.data;
+    return(
+      <div>
+        <Header content={basics} />
+        <Sections content={sections} />
+        <Footer content={basics} />
+      </div>  
+    )
   }
 }
 
-App.propTypes = {
+Main.propTypes = {
   data: PropTypes.object.isRequired
 }
 
-export default App;
+Main.defaultProps = {
+  profile: {},
+  sections: {}
+}

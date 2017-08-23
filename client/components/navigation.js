@@ -3,16 +3,19 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class Skills extends Component {
+class Navigation extends Component {
   constructor(props) {
     super(props);
   } 
 
   render() {
     return(
-      <h1>Skills</h1>
+      <div>
+        <nav id="nav-wrap">
+        </nav>
+      </div>
     )
   }
 }
 
-export default Skills;
+export default Navigation;

@@ -1,8 +1,10 @@
+'use strict'; 
+
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ReactRootPlugin = require('html-webpack-react-root-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+const HtmlWebpackReactRootPlugin = require('html-webpack-react-root-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -15,7 +17,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'My App'
     }),
-    new ReactRootPlugin('app'),
+    new HtmlWebpackReactRootPlugin('app'),
     new HtmlWebpackExternalsPlugin({
       externals: [
         {
@@ -31,6 +33,7 @@ module.exports = {
         {
           module: 'font-awesome',
           entry: 'css/font-awesome.min.css',
+          supplements: ['fonts/'],
         },
         {
           module: 'google-roboto',

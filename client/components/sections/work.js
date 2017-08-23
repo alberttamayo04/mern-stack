@@ -3,16 +3,16 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class Skills extends Component {
+class Resume extends Component {
   constructor(props) {
     super(props);
   } 
-
+  
   render() {
     return(
-      <h1>Skills</h1>
+      <h1>Resume</h1>
     )
   }
 }
 
-export default Skills;
+export default Resume;

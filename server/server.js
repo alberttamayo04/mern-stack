@@ -12,14 +12,14 @@ const bodyParser = require("body-parser");
 var app = express();
 
 // connect to mongo database
-let configDB = require('./config/db.js');
-mongoose.connect(configDB.url);
-mongoose.connection.on('open', () => {
-  console.log('Database connection established.');
-});
-mongoose.connection.on('error', (err) => {
-  console.log(err);
-});
+// let configDB = require('./config/db.js');
+// mongoose.connect(configDB.url);
+// mongoose.connection.on('open', () => {
+//   console.log('Database connection established.');
+// });
+// mongoose.connection.on('error', (err) => {
+//   console.log(err);
+// });
 
 // view engine
 app.set('view engine', 'html');

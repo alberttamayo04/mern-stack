@@ -1,15 +1,18 @@
 'use strict';
 
-// core modules
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 
-// local imports
 import App from './components/main';
+import Store from './redux/store';
 
-const cv = require('./cv');
+const StoreInstance = Store();
+const resume = require('./resume');
 
 ReactDOM.render(
-    <App data={cv} />, 
+    <Provider store={StoreInstance}>
+        <App data={resume} />
+    </Provider>,
     document.getElementById('app')
 );

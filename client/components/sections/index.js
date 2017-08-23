@@ -1,11 +1,11 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import About from './about';
-import Education from './education';
-import Skills from './skills';
-import Works from './works';
+import Resume from './resume';
+import Portfolio from './portfolio';
 import Contact from './contact';
 
 class Sections extends Component {
@@ -14,14 +14,26 @@ class Sections extends Component {
   } 
 
   render() {
-    <div>
-      <About />
-      <Work />
-      <Education />
-      <Skills />
-      <Contact />
-    </div>
+    let {profile, resume, portfolio} = this.props.content;
+    return(
+      <div>
+        <About content={profile} />
+        <Resume content={resume} />
+        <Portfolio content={portfolio} />
+        <Contact />
+      </div>
+    )
   }
+}
+
+Sections.propTypes = {
+  content: PropTypes.object.isRequired
+}
+
+Sections.defaultProps = {
+  profile: {},
+  resume: {},
+  portfolio: {}
 }
 
 export default Sections;

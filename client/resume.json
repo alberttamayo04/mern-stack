@@ -1,0 +1,87 @@
+{
+  "basics": {
+    "name": "Mark Tamayo",
+    "label": "",
+    "summary": "test",
+    "links": {
+      "facebook": {
+        "username": "",
+        "url": ""
+      },
+      "github": {
+        "username": "",
+        "url": ""
+      }
+    }
+  }, 
+  "sections": {
+    "profile": {
+      "picture": "",
+      "summary": "test",
+      "contact": {
+        "phone": "",
+        "email": "",
+        "address": {
+          "country": "Philippines",
+          "province": "Bulacan",
+          "city": "Plaridel",
+          "zipCode": "3004"  
+        }
+      }
+    },
+    "resume": {
+      "education": [
+        {
+          "school": "Bulacan State University",
+          "degree": "BS Mathematics major in Computer Science",
+          "summary": "",
+          "year": "2004-2008",
+          "highlights": []
+        },
+        {
+          "school": "Liceo de Pulilan Colleges",
+          "degree": "Secondary",
+          "summary": "",
+          "year": "2000-2004",
+          "highlights": []
+        },
+        {
+          "school": "Bulacan State University",
+          "degree": "Elementary",
+          "summary": "",
+          "year": "1994-2000",
+          "highlights": []
+        }
+      ],
+      "workingExperience": [
+        {
+          "company": "The Red Flag Group",
+          "position": "UI/UX Designer",
+          "website": "http://nrma.com.au",
+          "startDate": "2015-09-01",
+          "endDate": "2017-07-06",
+          "summary": "",
+          "highlights": []
+        },
+        {
+          "company": "The Red Flag Group",
+          "position": "UI/UX Designer",
+          "website": "http://nrma.com.au",
+          "startDate": "2015-09-01",
+          "endDate": "2017-07-06",
+          "summary": "",
+          "highlights": []
+        }
+      ],
+      "skills": {
+        "HTML": "7.0",
+        "CSS": "7.0",
+        "Photoshop": "7.0",
+        "Javascript": "7.0",
+        "Wordpress": "7.0"
+      }
+    },
+    "portfolio": []
+  }
+}
+

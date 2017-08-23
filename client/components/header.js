@@ -1,17 +1,35 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-import Menu from './nav';
+import Menu from './navigation';
 import Banner from './banner';
 
-class Header extends Component {
+export default class Header extends Component {
+  constructor(props) {
+    super(props);
+  } 
+
   render() {
-    <div>
-      <Menu content ='' />
-      <Banner content='' />
-    </div>
+    let banner = this.props.content; 
+    let links = {};
+    return(
+      <div>
+        <header id="home">
+          <Menu content={links}/>
+          <Banner content={banner} />
+        </header>  
+      </div>
+    )
   }
 }
 
-export default Header;
+Header.propTypes = {
+  content: PropTypes.object.isRequired
+}
+
+Header.defaultProps = {
+  links: {},
+  banner: {}
+}

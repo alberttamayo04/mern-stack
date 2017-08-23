@@ -1,10 +1,20 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class About extends Component {
+  constructor(props) {
+    super(props);
+  } 
+
   render() {
-    return <h1>About</h1>;
+    return(
+      <section id="about">
+        <div className="">
+        </div>    
+      </section> 
+    )
   }
 }
 
