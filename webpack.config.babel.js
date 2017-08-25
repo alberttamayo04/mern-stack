@@ -3,14 +3,14 @@
 import path from 'path';
 import webpack from 'webpack';
 import combineLoaders from "webpack-combine-loaders";
+import copyWebpackPlugin from 'copy-webpack-plugin';
 import extractTextPlugin from "extract-text-webpack-plugin";
 import htmlWebpackPlugin from 'html-webpack-plugin';
 import htmlWebpackExternalsPlugin from 'html-webpack-externals-plugin';
 import htmlWebpackReactRootPlugin from 'html-webpack-react-root-plugin';
 
 const config = {
-  devtool: 'source-map',
-  entry: './client/main.js',
+  entry: ['./client/main.js'],
   output: {
     path: path.join(__dirname, 'client/dist'),
     filename: 'js/bundle.js'
@@ -33,7 +33,7 @@ const config = {
         }),
         exclude: /node_modules/
       }
-    ],
+    ]
   },
   plugins: [
     new htmlWebpackPlugin({
@@ -59,8 +59,11 @@ const config = {
           supplements: ['fonts/'],
         }
       ],
-    })
-  ],
+    }),
+    new copyWebpackPlugin([
+      {from:'client/assets/images',to:'images'} 
+    ])
+  ]
 }
 
 export default config;

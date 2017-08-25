@@ -14,7 +14,7 @@ RUN npm install
 COPY . /app
 
 # expose port 8081 to the outside once the container has launched
-EXPOSE 3000
+EXPOSE 5000
 
 # command to be executed when docker image is launched
 CMD [ "npm", "start" ]

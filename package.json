@@ -2,11 +2,11 @@
   "name": "mern",
   "version": "1.0.0",
   "description": "SPA using MERN technology stack",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "webpack && node bin/www",
     "build": "webpack",
-    "test": "mocha client/test/index.js"
+    "test": ""
   },
   "author": "Mark Tamayo",
   "license": "MIT",
@@ -14,6 +14,7 @@
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "chai": "^4.1.1",
+    "enzyme": "^2.9.1",
     "express": "^4.15.2",
     "mocha": "^3.5.0",
     "mongoose": "^4.11.8",
@@ -24,7 +25,9 @@
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-native": "^4.2.0",
+    "react-test-renderer": "^15.6.1",
     "redux": "^3.7.2",
     "sinon": "^3.2.1"
   },
