@@ -3,13 +3,12 @@
 import React from 'react';
 import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
-import sinon from 'sinon';
 
-import home from './home';
+import Home from './home';
 
 describe('Home', () => {
-  it('should render component', () => {
-    const wrapper = shallow(<home />);
-    expect(wrapper.find('.home').length).toBe(1);
+  it('should render <Home /> component', () => {
+    const wrapper = shallow(<Home />);
+    expect(wrapper.find('.home').length).to.equal(1);
   });
 });

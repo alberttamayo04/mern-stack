@@ -1,12 +1,14 @@
 'use strict';
 
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
-import profile from './profile';
+import {expect} from 'chai';
+import {mount, shallow} from 'enzyme';
+
+import Profile from './profile';
 
 describe('About', () => {
-  it('should render component', () => {
-    const wrapper = shallow(<profile />);
-    expect(wrapper.find('.profile').length).toBe(1);
+  it('should render <Profile /> component', () => {
+    const wrapper = shallow(<Profile />);
+    expect(wrapper.find('.profile').length).to.equal(1);
   });
 });

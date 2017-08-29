@@ -1,3 +1,3 @@
-import profile from './profile';
+import Profile from './profile';
 
-export default profile;
+export default Profile;

@@ -29,4 +29,4 @@ Profile.defaultProps = {
   //
 }
 
-export default cssModules(Profile, styleCss, { allowMultiple: true });
+export default cssModules(Profile, styleCss, {allowMultiple: true});

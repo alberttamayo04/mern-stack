@@ -6,21 +6,23 @@ import axios from 'axios';
 import styleCss from './home.css';
 import cssModules from 'react-css-modules';
 
+import {retrieveEntries} from '../../../server/services/post';
+
 class Home extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       posts: []
     };
   } 
 
   componentDidMount() {
-    axios.get('http://www.reddit.com/r/reactjs.json')
-      .then(res => {
-        const posts = res.data.data.children.map(obj => obj.data);
-        this.setState({posts});
-      });
+    axios.get('http://localhost:7000/post/retrieve/all').then((res) => {
+      const posts = res.data.map(obj => obj.data);
+      this.setState({posts}); 
+    }).catch((res) => {
+      console.log(res);
+    });
   }
 
   render() {
@@ -29,7 +31,7 @@ class Home extends Component {
         <div className="home">
         <ul>
           {this.state.posts.map(post =>
-            <li key={post.id}>{post.title}</li>
+            <li key={post._id}>{post.title}</li>
           )}
         </ul>
         </div>
@@ -38,8 +40,12 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {}
+Home.propTypes = {
 
-Home.defaultProps = {}
+}
 
-export default cssModules(Home, styleCss, { allowMultiple: true });
+Home.defaultProps = {
+  
+}
+
+export default cssModules(Home, styleCss, {allowMultiple: true});
