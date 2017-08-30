@@ -9,24 +9,22 @@ import cssModules from 'react-css-modules';
 class Navbar extends Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    // };    
   } 
 
   render() {
-    // let iconBar = () => {};
     return(
       <div className="navbar navbar-inverse navbar-static-top">
         <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             </button>
-            <Link className="" to="/">Mark Tamayo</Link>          
+            <Link className="navbar-brand" to="/">Mark Tamayo</Link>          
           </div>
           <div className="navbar-collapse collapse">
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
             </ul>  
           </div>    
         </div>
@@ -35,12 +33,6 @@ class Navbar extends Component {
   }
 }
 
-Navbar.propTypes = {
-
-}
-
-Navbar.defaultProps = {
-
-}
+Navbar.propTypes = {}
 
 export default cssModules(Navbar, styleCss, {allowMultiple: true});

@@ -81,7 +81,13 @@
         "Wordpress": "7.0"
       }
     },
-    "portfolio": []
+    "portfolio": [
+      {
+        "image": "",
+        "title": "",
+        "description": ""
+      }
+    ]
   }
 }
 

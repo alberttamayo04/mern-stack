@@ -1,0 +1,37 @@
+const server = require('../server/server');
+
+// load models 
+const User = require('../server/models/user');
+const Post = require('../server/models/post');
+
+// setup admin user
+let admin = new User({
+	name: 'Mark Tamayo',
+	username: 'mark.albert.r.tamayo',
+  password: 'markadmin123',
+	email: 'alberttamayo04@gmail.com',
+	phone: 09177124877,
+  role: 'admin'
+});
+
+// save admin user
+admin.save((err, res) => {
+	if (err) console.log('error' + err.message);
+	else console.log('Admin account has been created.');
+});
+
+// setup blog content
+let post = new Post(
+  {
+    title: 'Test Article',
+    author: 'Mark Tamayo',
+    excerpt: 'This is a sample article excerpt',
+    content: 'Article Content goes here'
+  }
+);
+
+// save blog content
+post.save((err, res) => {
+	if (err) console.log('error' + err.message);
+	else console.log('Blog content has been added.');
+});

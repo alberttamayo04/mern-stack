@@ -57,11 +57,18 @@ const config = {
           module: 'font-awesome',
           entry: 'css/font-awesome.min.css',
           supplements: ['fonts/'],
+        },
+        {
+          module: 'google-roboto',
+          entry: {
+            path: 'http://fonts.googleapis.com/css?family=Montserrat:400,700',
+            type: 'css',
+          }  
         }
       ],
     }),
     new copyWebpackPlugin([
-      {from:'client/assets/images',to:'images'} 
+      {from:'client/assets/images', to:'images'} 
     ])
   ]
 }

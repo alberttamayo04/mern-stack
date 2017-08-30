@@ -4,8 +4,9 @@
   "description": "SPA using MERN technology stack",
   "main": "main.js",
   "scripts": {
-    "start": "webpack && node bin/www",
     "build": "webpack",
+    "setup": "node bin/setup",
+    "start": "webpack && node bin/www",
     "test": "mocha --require ignore-styles --compilers js:babel-core/register client/**/*spec.js"
   },
   "author": "Mark Tamayo",
@@ -19,6 +20,7 @@
     "ignore-styles": "^5.0.1",
     "mocha": "^3.5.0",
     "mongoose": "^4.11.8",
+    "mongoose-unique-validator": "^1.0.5",
     "morgan": "^1.8.2",
     "prop-types": "^15.5.10",
     "react": "^15.4.2",
@@ -30,6 +32,7 @@
     "react-router-native": "^4.2.0",
     "react-test-renderer": "^15.6.1",
     "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
     "sinon": "^3.2.1"
   },
   "devDependencies": {

@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 class Layout extends Component {
   constructor(props) {
@@ -11,24 +12,21 @@ class Layout extends Component {
   } 
 
   render() {
+    console.log('props:', this.props); 
     return (
       <div>
           <Navbar />
           <div className="container">
             {this.props.children}
           </div>  
+          <Footer />
       </div>
     )
   }
 }
 
 Layout.propTypes = {
-  // children: PropTypes.object.isRequired
-}
-
-Layout.defaultProps = {
-  // links: {},
-  // banner: {}
+  children: PropTypes.array.isRequired
 }
 
 export default Layout;

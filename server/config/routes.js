@@ -27,5 +27,5 @@ module.exports = (app) => {
       res.send(JSON.stringify(result, null, 4));
     });
   });
-
+  
 }

@@ -12,21 +12,13 @@ class Profile extends Component {
 
   render() {
     return(
-      <div>
-        <div className="profile">
-          About
-        </div>
+      <div className="profile">
+        About
       </div>
     )
   }
 }
 
-Profile.propTypes = {
-  //
-}
-
-Profile.defaultProps = {
-  //
-}
+Profile.propTypes = {}
 
 export default cssModules(Profile, styleCss, {allowMultiple: true});

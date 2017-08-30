@@ -17,8 +17,7 @@ var postSchema = new mongoose.Schema({
     required: true
   },
   metaTitle: String,
-  metaDescription: String,
-  status: String
+  metaDescription: String
 },
 {
   timestamps: true
