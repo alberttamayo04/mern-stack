@@ -13,28 +13,27 @@ class Post extends Component {
     }
   } 
 
-  componentWillMount() {
-    this.posts = this.props.payload.then((res) => {
-      return Object.keys(res.data).map(key => res.data[key]);
+  componentDidMount() {
+    this.props.payload.then((res) => {
+      console.log('payload:', res.data);
+      this.setState({
+        posts: Object.keys(res.data).map(key => res.data[key])
+      });
     })
   }
 
   render() {
-    console.log('this.posts', this.posts);
-    const postList = this.posts.map((item, id) => {
-      return(
-        <div key={id}>
-          {item.title}
-        </div>  
-      )
-    });
+    console.log('state:', this.state.posts);
+    // const postList = this.state.posts.map((item, id) => {
+    //   return <div>{item.name}</div>
+    // });
     return(
       <div className="blog">
         <div className="post-wrap">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-lg-offset-2">
-                {postList}
+                
               </div>  
             </div>  
           </div>  

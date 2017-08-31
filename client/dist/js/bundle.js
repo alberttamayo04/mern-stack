@@ -32336,7 +32336,6 @@ var Layout = function (_Component) {
   _createClass(Layout, [{
     key: 'render',
     value: function render() {
-      console.log('props:', this.props);
       return _react2.default.createElement(
         'div',
         null,
@@ -38088,25 +38087,26 @@ var Post = function (_Component) {
   }
 
   _createClass(Post, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this.posts = this.props.payload.then(function (res) {
-        return Object.keys(res.data).map(function (key) {
-          return res.data[key];
-        });
-      });
-    }
+    key: 'componentDidMount',
+    value: function componentDidMount() {}
   }, {
     key: 'render',
     value: function render() {
-      console.log('this.posts', this.posts);
-      var postList = this.posts.map(function (item, id) {
-        return _react2.default.createElement(
-          'div',
-          { key: id },
-          item.title
-        );
+      var _this2 = this;
+
+      this.props.payload.then(function (res) {
+        //this.state.posts = Object.keys(res.data).map(key => res.data[key]);
+        console.log('payload:', res.data);
+        _this2.setState({
+          posts: Object.keys(res.data).map(function (key) {
+            return res.data[key];
+          })
+        });
       });
+      console.log('state:', this.state.posts);
+      // const postList = this.state.posts.map((item, id) => {
+      //   return <div>{item.name}</div>
+      // });
       return _react2.default.createElement(
         'div',
         { className: 'blog' },
@@ -38119,11 +38119,7 @@ var Post = function (_Component) {
             _react2.default.createElement(
               'div',
               { className: 'row' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col-lg-8 col-lg-offset-2' },
-                postList
-              )
+              _react2.default.createElement('div', { className: 'col-lg-8 col-lg-offset-2' })
             )
           )
         )

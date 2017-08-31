@@ -7,7 +7,7 @@ import {mount, shallow} from 'enzyme';
 import Post from './post';
 
 describe('Post', () => {
-  it('should render <Home /> component', () => {
+  it('should render <Post /> component', () => {
     const wrapper = shallow(<Post />);
     expect(wrapper.find('.blog').length).to.equal(1);
   });

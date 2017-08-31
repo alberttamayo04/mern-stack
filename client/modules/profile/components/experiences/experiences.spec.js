@@ -4,11 +4,11 @@ import React from 'react';
 import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
 
-import Home from './home';
+import WorkExperience from './experiences';
 
 describe('Home', () => {
-  it('should render <Home /> component', () => {
-    const wrapper = shallow(<Home />);
-    expect(wrapper.find('.home').length).to.equal(1);
+  it('should render <WorkExperience /> component', () => {
+    const wrapper = shallow(<WorkExperience />);
+    expect(wrapper.find('.work-experience').length).to.equal(1);
   });
 });
