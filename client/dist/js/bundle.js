@@ -38088,14 +38088,10 @@ var Post = function (_Component) {
 
   _createClass(Post, [{
     key: 'componentDidMount',
-    value: function componentDidMount() {}
-  }, {
-    key: 'render',
-    value: function render() {
+    value: function componentDidMount() {
       var _this2 = this;
 
       this.props.payload.then(function (res) {
-        //this.state.posts = Object.keys(res.data).map(key => res.data[key]);
         console.log('payload:', res.data);
         _this2.setState({
           posts: Object.keys(res.data).map(function (key) {
@@ -38103,6 +38099,10 @@ var Post = function (_Component) {
           })
         });
       });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
       console.log('state:', this.state.posts);
       // const postList = this.state.posts.map((item, id) => {
       //   return <div>{item.name}</div>
